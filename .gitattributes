@@ -1,14 +1,16 @@
-# Treat all Dart files as Dart
+# Force GitHub to detect Dart as the primary language
 *.dart linguist-language=Dart
 
-# Ignore native Android/iOS/C++ files from GitHub language stats
-*.gradle linguist-language=ignore
-*.kt linguist-language=ignore
-*.java linguist-language=ignore
-*.c linguist-language=ignore
+# Ignore native and build languages
 *.cpp linguist-language=ignore
 *.h linguist-language=ignore
+*.c linguist-language=ignore
+*.cmake linguist-language=ignore
+CMakeLists.txt linguist-language=ignore
 
-# Mark whole Android and iOS folders as vendored
+# Mark native folders as vendored (ignored from language stats)
 android/** linguist-vendored
 ios/** linguist-vendored
+windows/** linguist-vendored
+macos/** linguist-vendored
+linux/** linguist-vendored
